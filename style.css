@@ -12,7 +12,7 @@
 }
 
 html {
-  scroll-behavior: smooth; /* Biar pas klik menu navbar meluncur halus */
+  scroll-behavior: smooth;
 }
 
 * {
@@ -154,7 +154,7 @@ body {
   color: var(--warna-aksen);
 }
 
-/* TENTANG SAYA */
+/* STYLING TENTANG */
 .about-box {
   background-color: var(--bg-kedua);
   padding: 32px;
