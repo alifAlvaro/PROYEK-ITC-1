@@ -11,6 +11,10 @@
   --font-koding: 'JetBrains Mono', monospace;
 }
 
+html {
+  scroll-behavior: smooth; /* Biar pas klik menu navbar meluncur halus */
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -22,6 +26,7 @@ body {
   background-color: var(--bg-utama);
   color: var(--teks-utama);
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 /* STYLING NAVBAR */
@@ -83,7 +88,7 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 40px;
-  padding: 80px 8%;
+  padding: 80px 8% 100px;
   min-height: 85vh;
 }
 
@@ -114,61 +119,32 @@ body {
   color: var(--warna-aksen);
 }
 
-.hero-desc {
-  color: var(--teks-kedua);
-  font-size: 1.05rem;
-  margin-bottom: 28px;
-  max-width: 540px;
-}
-
-.hero-buttons {
-  display: flex;
-  gap: 16px;
-}
-
-.btn-primary {
-  background-color: var(--warna-aksen);
-  color: #ffffff;
-  padding: 12px 24px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 700;
-  transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
-.btn-secondary {
-  border: 1px solid var(--warna-garis);
-  background-color: var(--bg-kedua);
-  color: var(--teks-utama);
-  padding: 12px 24px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: border-color 0.2s ease;
-}
-
-.btn-primary:hover {
-  transform: translateY(-3px);
-  opacity: 0.9;
-}
-
-.btn-secondary:hover {
-  border-color: var(--warna-aksen);
-}
-
 .hero-image img {
-  width: 210px;
-  height: 280px;
+  width: 230px;
+  height: 290px;
   border-radius: 24px; 
   border: 3px solid var(--warna-aksen);
   transition: transform 0.3s ease;
   object-fit: cover;
+  box-shadow: 0 0 25px var(--warna-aksen-tipis);
 }
 
 .hero-image img:hover {
   transform: scale(1.03);
 }
 
+.scroll-text {
+  position: absolute;
+  bottom: 20px;        
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: var(--teks-kedua);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* SECTION UMUM */
 .section-container {
   padding: 70px 8%;
 }
@@ -184,17 +160,7 @@ body {
   color: var(--warna-aksen);
 }
 
-.scroll-text {
-  position: absolute;
-  bottom: 20px;        
-  left: 0;
-  width: 100%;
-  text-align: center;
-  color: var(--teks-kedua);
-  font-size: 28px;
-}
-
-/* Tentang Saya */
+/* TENTANG SAYA */
 .about-box {
   background-color: var(--bg-kedua);
   padding: 32px;
@@ -206,73 +172,46 @@ body {
 
 .about-box p {
   color: var(--teks-kedua);
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
-.info-item {
-  font-size: 0.95rem;
-  color: var(--teks-kedua);
+.about-box p:last-child {
+  margin-bottom: 0;
 }
 
-.info-item strong {
-  color: var(--teks-utama);
-}
-
-/* STYLING PENDIDIKAN */
-.timeline {
-  position: relative;
-  max-width: 900px;
+/* ================= STYLING PENDIDIKAN (MODEL 2: LIST VERTIKAL) ================= */
+.education-box {
+  background-color: var(--bg-kedua);
+  padding: 10px 32px;
+  border-radius: 14px;
+  border: 1px solid var(--warna-garis);
+  max-width: 800px;
   margin: 0 auto;
-  padding: 20px 0;
 }
 
-.timeline::after {
-  content: '';
-  position: absolute;
-  width: 4px;
-  background-color: var(--warna-garis);
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 4px;
+.edu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--warna-garis);
 }
 
-.timeline-item {
-  padding: 15px 40px;
-  position: relative;
-  width: 50%;
+/* Menghilangkan garis bawah pada item terakhir agar rapi */
+.edu-item:last-child {
+  border-bottom: none;
 }
 
-.timeline-item.left {
-  left: 0;
-  text-align: right;
+.edu-info h3 {
+  font-size: 1.1rem;
+  color: var(--teks-utama);
+  margin-bottom: 4px;
 }
 
-.timeline-item.right {
-  left: 50%;
-  text-align: left;
-}
-
-.timeline-item::after {
-  content: '';
-  position: absolute;
-  width: 18px;
-  height: 18px;
-  background-color: var(--bg-utama);
-  border: 4px solid var(--warna-aksen);
-  top: 32px;
-  border-radius: 50%;
-  z-index: 2;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.timeline-item.left::after {
-  right: -9px;
-}
-
-.timeline-item.right::after {
-  left: -9px;
+.edu-info p {
+  font-size: 0.88rem;
+  color: var(--teks-kedua);
+  margin: 0;
 }
 
 /* STYLING QUOTE */
@@ -293,7 +232,6 @@ body {
   border-color: var(--warna-aksen);
 }
 
-/* Teks Kutipan Utama */
 .quote-text {
   font-size: 1.3rem;
   font-weight: 700;
@@ -315,7 +253,7 @@ body {
   display: flex;
   align-items: center;
   gap: 14px;
-  margin-bottom: 36px;
+  margin-bottom: 20px;
   flex-direction: column;
 }
 
@@ -328,10 +266,13 @@ body {
   border: 1px solid var(--warna-garis);
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
   font-size: 0.95rem;
   font-weight: 600;
   transition: all 0.3s ease;
+  max-width: 100%;
+  word-break: break-all;
 }
 
 .social-links a i {
@@ -354,27 +295,22 @@ body {
 /* STYLING FOOTER */
 .footer {
   background-color: var(--bg-footer);
-  padding: 30px 8% 30px;
+  padding: 40px 8% 30px;
   text-align: center;
   border-top: 1px solid var(--warna-garis);
   margin-top: 40px;
 }
 
 .footer h2 {
-  margin: 10px;
-  padding-bottom: 20px;
-}
-
-.footer p {
-  color: var(--teks-kedua);
-  max-width: 700px;
-  margin: 0 auto 24px;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
 }
 
 .footer-divider {
   border: none;
   border-top: 1px solid var(--warna-garis);
-  margin-bottom: 20px;
+  max-width: 600px;
+  margin: 0 auto 20px;
 }
 
 .copyright {
@@ -382,4 +318,61 @@ body {
   color: var(--teks-kedua);
 }
 
+/* ================= RESPONSIF UNTUK HP & TABLET ================= */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 14px;
+    padding: 16px 5%;
+  }
 
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    font-size: 0.9rem;
+  }
+
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 50px 6% 90px;
+    min-height: auto;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero-image img {
+    width: 190px;
+    height: 240px;
+  }
+
+  .section-container {
+    padding: 50px 6%;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  /* Penyesuaian khusus untuk tampilan layar HP */
+  .education-box {
+    padding: 10px 20px;
+  }
+
+  .edu-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 18px 0;
+  }
+
+
+  .social-links a {
+    width: 100%;
+    font-size: 0.85rem;
+    padding: 12px 14px;
+  }
+}
