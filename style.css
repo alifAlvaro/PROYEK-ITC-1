@@ -124,13 +124,7 @@ body {
   height: 290px;
   border-radius: 24px; 
   border: 3px solid var(--warna-aksen);
-  transition: transform 0.3s ease;
   object-fit: cover;
-  box-shadow: 0 0 25px var(--warna-aksen-tipis);
-}
-
-.hero-image img:hover {
-  transform: scale(1.03);
 }
 
 .scroll-text {
@@ -140,7 +134,7 @@ body {
   width: 100%;
   text-align: center;
   color: var(--teks-kedua);
-  font-size: 1.1rem;
+  font-size: 2rem;
   font-weight: 600;
 }
 
@@ -173,13 +167,14 @@ body {
 .about-box p {
   color: var(--teks-kedua);
   margin-bottom: 20px;
+  
 }
 
 .about-box p:last-child {
   margin-bottom: 0;
 }
 
-/* ================= STYLING PENDIDIKAN (MODEL 2: LIST VERTIKAL) ================= */
+/* STYLING PENDIDIKAN */
 .education-box {
   background-color: var(--bg-kedua);
   padding: 10px 32px;
@@ -197,7 +192,6 @@ body {
   border-bottom: 1px solid var(--warna-garis);
 }
 
-/* Menghilangkan garis bawah pada item terakhir agar rapi */
 .edu-item:last-child {
   border-bottom: none;
 }
@@ -208,10 +202,64 @@ body {
   margin-bottom: 4px;
 }
 
+.edu-info h3 span{
+  color: var(--warna-aksen);
+}
+
 .edu-info p {
   font-size: 0.88rem;
   color: var(--teks-kedua);
   margin: 0;
+}
+
+/* STYLING PENCAPAIAN */
+.achievement-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.achievement-card {
+  background-color: var(--bg-kedua);
+  border: 1px solid var(--warna-garis);
+  border-radius: 12px;
+  padding: 24px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.achievement-card h3 {
+  font-size: 1rem;
+  color: var(--teks-utama);
+  font-weight: 600;
+}
+
+/* STYLING TUJUAN */
+.goals-list {
+  background-color: var(--bg-kedua);
+  border: 1px solid var(--warna-garis);
+  border-radius: 12px;
+  padding: 28px 32px 28px 48px;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.goals-list li {
+  color: var(--teks-utama);
+  font-size: 0.98rem;
+  margin-bottom: 14px;
+}
+
+.goals-list li:last-child {
+  margin-bottom: 0;
+}
+
+.goals-list li::marker {
+  color: var(--warna-aksen);
 }
 
 /* STYLING QUOTE */
@@ -224,12 +272,6 @@ body {
   margin: 0 auto;
   text-align: center;
   position: relative;
-  transition: transform 0.3s ease, border-color 0.3s ease;
-}
-
-.quote-box:hover {
-  transform: translateY(-4px);
-  border-color: var(--warna-aksen);
 }
 
 .quote-text {
@@ -303,7 +345,11 @@ body {
 
 .footer h2 {
   font-size: 1.3rem;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
+}
+
+.footer-content p {
+  padding-bottom: 20px;
 }
 
 .footer-divider {
@@ -318,7 +364,7 @@ body {
   color: var(--teks-kedua);
 }
 
-/* ================= RESPONSIF UNTUK HP & TABLET ================= */
+/* RESPONSIF UNTUK HP */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
@@ -357,7 +403,6 @@ body {
     font-size: 1.6rem;
   }
 
-  /* Penyesuaian khusus untuk tampilan layar HP */
   .education-box {
     padding: 10px 20px;
   }
@@ -374,5 +419,9 @@ body {
     width: 100%;
     font-size: 0.85rem;
     padding: 12px 14px;
+  }
+
+  .achievement-grid {
+    grid-template-columns: 1fr;
   }
 }
