@@ -29,7 +29,6 @@ body {
   overflow-x: hidden;
 }
 
-/* STYLING NAVBAR */
 .navbar {
   position: sticky;
   top: 0;
@@ -81,7 +80,6 @@ body {
   font-weight: 700 !important;
 }
 
-/* STYLING HERO */
 .hero {
   position: relative;
   display: flex;
@@ -138,7 +136,6 @@ body {
   font-weight: 600;
 }
 
-/* SECTION UMUM */
 .section-container {
   padding: 70px 8%;
 }
@@ -154,7 +151,6 @@ body {
   color: var(--warna-aksen);
 }
 
-/* STYLING TENTANG */
 .about-box {
   background-color: var(--bg-kedua);
   padding: 32px;
@@ -174,7 +170,6 @@ body {
   margin-bottom: 0;
 }
 
-/* STYLING PENDIDIKAN */
 .education-box {
   background-color: var(--bg-kedua);
   padding: 10px 32px;
@@ -212,7 +207,6 @@ body {
   margin: 0;
 }
 
-/* STYLING PENCAPAIAN */
 .achievement-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -238,7 +232,6 @@ body {
   font-weight: 600;
 }
 
-/* STYLING TUJUAN */
 .goals-list {
   background-color: var(--bg-kedua);
   border: 1px solid var(--warna-garis);
@@ -262,7 +255,6 @@ body {
   color: var(--warna-aksen);
 }
 
-/* STYLING QUOTE */
 .quote-box {
   background-color: var(--bg-kedua);
   border: 1px solid var(--warna-garis);
@@ -290,7 +282,6 @@ body {
   font-weight: 600;
 }
 
-/* STYLING KONTAK */
 .social-links {
   display: flex;
   align-items: center;
@@ -334,7 +325,6 @@ body {
   color: #ffffff;
 }
 
-/* STYLING FOOTER */
 .footer {
   background-color: var(--bg-footer);
   padding: 40px 8% 30px;
@@ -364,7 +354,6 @@ body {
   color: var(--teks-kedua);
 }
 
-/* RESPONSIF UNTUK HP */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
