@@ -2,7 +2,7 @@
   --bg-utama: #14110f;
   --bg-kedua: #211c19;
   --bg-footer: #0c0a09;
-  --warna-aksen: #f97316; /* Oranye Menyala */
+  --warna-aksen: #f97316;
   --warna-aksen-tipis: rgba(249, 115, 22, 0.15);
   --teks-utama: #fafaf9;
   --teks-kedua: #a8a29e;
@@ -198,6 +198,10 @@ body {
 }
 
 .edu-info h3 span{
+  color: var(--teks-kedua);
+}
+
+.edu-info h3 strong{
   color: var(--warna-aksen);
 }
 
@@ -342,7 +346,7 @@ body {
   padding-bottom: 20px;
 }
 
-.footer-divider {
+.footer-line {
   border: none;
   border-top: 1px solid var(--warna-garis);
   max-width: 600px;
