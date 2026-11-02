@@ -6,6 +6,7 @@
   --warna-aksen-tipis: rgba(249, 115, 22, 0.15);
   --teks-utama: #fafaf9;
   --teks-kedua: #a8a29e;
+  --teks-ketiga: #fbbf24;
   --warna-garis: #38302b;
   --font-utama: 'Montserrat', sans-serif;
   --font-koding: 'JetBrains Mono', monospace;
@@ -193,7 +194,7 @@ body {
 }
 
 .edu-info h3 span{
-  color: var(--teks-kedua);
+  color: var(--teks-ketiga);
 }
 
 .edu-info h3 strong{
