@@ -163,11 +163,6 @@ body {
 .about-box p {
   color: var(--teks-kedua);
   margin-bottom: 20px;
-  
-}
-
-.about-box p:last-child {
-  margin-bottom: 0;
 }
 
 .education-box {
